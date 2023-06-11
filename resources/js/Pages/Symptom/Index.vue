@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 
 defineProps({symptoms: Object})
 
@@ -53,10 +53,21 @@ defineProps({symptoms: Object})
                                                 {{ symtom.description }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                $2999
+                                                {{ symtom.problem.description }}
                                             </td>
                                             <td class="px-6 py-4">
-                                                <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                                <Link
+                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                    Detail
+                                                </Link>
+                                                <Link
+                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                    Edit
+                                                </Link>
+                                                <Link
+                                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                    Hapus
+                                                </Link>
                                             </td>
                                         </tr>
                                     </tbody>

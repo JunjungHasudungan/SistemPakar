@@ -10,4 +10,9 @@ class Symptom extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function problem()
+    {
+        return $this->belongsTo(Problem::class);
+    }
 }

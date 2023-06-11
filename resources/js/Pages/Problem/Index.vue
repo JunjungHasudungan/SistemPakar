@@ -2,6 +2,8 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head, Link, router, useForm } from '@inertiajs/vue3';
 import { reactive } from 'vue'
+import Blue from '@/Components/Button/Blue.vue'
+
 
     const problem_form = useForm({
         problem_code: '',
@@ -24,8 +26,13 @@ import { reactive } from 'vue'
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900 dark:text-gray-100">
-                        <!-- table -->
 
+                        <div
+                            class="inline-flex p-2 w-full">
+                            <!-- <Blue></Blue> -->
+                        </div>
+
+                        <!-- table -->
                         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -57,14 +64,26 @@ import { reactive } from 'vue'
                                            {{ problem.description }}
                                         </td>
                                         <td class="px-6 py-4">
-                                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                            <Link
+                                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                Detail
+                                            </Link>
+
+                                            <Link
+                                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                Edit
+                                            </Link>
+
+                                            <Link
+                                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                                                Hapus
+                                            </Link>
                                         </td>
                                     </tr>
 
                                 </tbody>
                             </table>
                         </div>
-
                         <!-- end table -->
                     </div>
                 </div>
